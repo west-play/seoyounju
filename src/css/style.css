@@ -4,6 +4,8 @@
     padding: 0;
     list-style: none;
     box-sizing: border-box;
+    cursor: none;
+
 }
   
 @media screen { body { background-color: rgba(250, 250, 250, 1); } }
@@ -16,47 +18,20 @@ margin: 0;
 /* cursor: url(../img/about_bell.png) auto; */
 }
 
-
-
-/* .main_text{
-    width: 60vw;
-    height: 35vh;
-    border: solid 1px red;
-    position: relative;
-    margin: 30vh auto;
+.cursor_item{
+  width: 45px;
+  height: 45px;
+  background: #7000ff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-top: -25px;
+  margin-left: -25px;
+  border-radius: 50%;
+  z-index: 1000;
+  mix-blend-mode: difference;
+  pointer-events: none;
 }
-
-.main_text h1{
-    position: relative;
-    font-size: 5vw;
-    text-align: center;
-    margin: 0;
-}
-
-
-
-.nav_set ul{
-    position: fixed;
-    bottom: 80px;
-    right: -64px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-    transform: rotate(90deg) translate(-50%, -50%);
-}
-
-.nav_set ul li{
-    padding: 10px;
-    margin: 10px 15px;
-    font-size: 18px;
-    font-weight: 500;
-    transition: 0.2s ease-in-out;
-    cursor: pointer;
-} */
-
-
-
 
 
 
@@ -78,7 +53,6 @@ margin: 0;
 
 header {
     position: fixed;
-    z-index: 9998;
     width: 100vw;
     height: 100vh;
     color: #fff;
@@ -88,7 +62,7 @@ header {
   }
   header.showing {
     opacity: 0;
-    animation: navshown 0.5s 2.8s ease-in forwards;
+    animation: navshown 0.5s 3s ease-in forwards;
   }
   header.shown {
     opacity: 1;
@@ -128,7 +102,7 @@ header {
   header > nav > ul {
     position: fixed;
     bottom: 80px;
-    right: -73px;
+    right: -90px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -138,13 +112,16 @@ header {
   header > nav > ul > li {
     padding: 10px;
     margin: 10px 15px;
-    font-size: 0.8vw;
+    font-size: 18px;
     font-weight: 500;
     transition: 0.2s ease-in-out;
     cursor: pointer;
+    mix-blend-mode: difference;
   }
   header > nav > ul > li:hover {
     transform: scale(1.3) translate(0, 0);
+    color: #7000ff;
+    mix-blend-mode: difference;
   }
   header > nav > ul > li.home {
     display: none;
@@ -171,9 +148,7 @@ header {
   header > nav > p.copyright {
     display: none;
   }
-  /* header > nav > h2.nav-hello {
-    display: none;
-  } */
+
   header > div.cube-logo {
     position: fixed;
     opacity: 0%;
@@ -215,7 +190,6 @@ header {
       transform: translate(-50%, 0) rotate(0deg);
       font-size: 14px;
       cursor: pointer;
-      z-index: 1;
     }
     header > nav > div.to-top {
       display: none;
@@ -429,14 +403,13 @@ header {
     left: 0;
     width: 100vw;
     height: 100vh;
-    z-index: 2499;
-    /* display: none; */
     transform: translateZ(1500px);
     pointer-events: none;
   }
   section.main.shown {
     opacity: 0;
-    animation: mainshown 0.5s 2.8s ease-in forwards;
+    animation: mainshown 1s ease-in forwards;
+
   }
   @keyframes mainshown {
     from {
@@ -448,25 +421,42 @@ header {
   }
   
   p.hello {
-    font-size: 7vw;
+    width: 70%;
+    height: 50%;
+    font-size: 5vw;
     position: fixed;
-    left: 30vw;
+    left: 7vw;
     top: 17vh;
-    text-align: center;
+    text-align: left;
     line-height: 1.4;
     font-weight: 600;
-    color: #7000ff;
+    color: #fff;
+    border: solid 1px red;
   }
+
   p.hello > span {
+    opacity: 0;
     font-weight: 300;
+    animation: publisher 1.5s 2s linear forwards;
+    z-index: -100;
   }
   
+  @keyframes publisher {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 100%;
+    }
+  }
+
+
+
   article.about-space {
     color: #fff;
     position: fixed;
     bottom: 50px;
     left: 60px;
-    z-index: 101;
     pointer-events: none;
   }
   article.about-space > h2 {
@@ -497,7 +487,6 @@ header {
     transform: translate(-50%, 0) scale(0.7);
     bottom: 40px;
     animation: scroll-down 1.5s ease infinite;
-    z-index: 101;
     pointer-events: none;
     color: #fff;
     display: flex;
