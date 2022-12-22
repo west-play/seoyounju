@@ -18,7 +18,7 @@
   margin-top: -25px;
   margin-left: -25px;
   border-radius: 50%;
-  z-index: 9999 !important;
+  z-index: 71000 !important;
   mix-blend-mode: difference;
   pointer-events: none;
 }
@@ -76,7 +76,7 @@ header {
     transform: translateZ(2500px);
     pointer-events: none;
     opacity: 0;
-    z-index: 9888;
+    z-index: 69000;
   }
   header.showing {
     opacity: 0;
@@ -595,10 +595,11 @@ header {
 
 /* -------------------------------------------------------------------------------------------------------------- */
 .project{
-  width: 100vw;
-  height: 300px;
+  width: 70vw;
   position: relative;
-  border: solid 1px red;
+  left: 14vw;
+  top: 8vh;
+  cursor: pointer;
 }
 
 
@@ -655,10 +656,15 @@ header {
   right:0%; 
   height:100vh; 
   width:100vw;  
-  background-color:#7000ff;
+  background: color #242424;;
   color:#fff;  
   z-index: 55000;
 }
+
+
+
+
+
 
 .sec5-3{
   position:fixed;
@@ -666,10 +672,20 @@ header {
   right:0%; 
   height:100vh; 
   width:100vw;  
-  background-color:#f2f2f2;
+  background-color:#242424;
   color:#000;  
   z-index: 54000;
 }
+
+.about_who{
+  width: 100vw;
+  position: relative;
+  top: -3vh;
+}
+
+
+
+
 
 .sec5-4{
   position:fixed;
@@ -691,6 +707,37 @@ header {
   background-color:#fff;
   color:#000;  
   z-index: 52000;
+}
+
+.number{
+  z-index: 999999;
+  color: #fff;
+  font-size: 2vw;
+  position: absolute;
+  top: 39vh;
+  left: 50vw;
+}
+
+.resume_btn{
+  position: absolute;
+  border: solid 2px #7000ff;
+  border-radius: 25px;
+  z-index: 999999;
+  font-size: 1vw;
+  background-color: #fff;
+  top: 55vh;
+  left: 50vw;
+  padding: 10px 25px;
+}
+
+.resume_btn > a{
+  color: #7000ff;
+  cursor: pointer;
+}
+
+.resume_btn > a:hover{
+  
+  text-decoration: none;
 }
 
 .sec5-6 {
