@@ -198,6 +198,16 @@ header {
     }
   }
   
+
+
+
+
+
+
+
+
+
+  
   @media screen and (max-width: 768px) {
     header > nav {
       width: 100vw;
@@ -264,9 +274,7 @@ header {
       font-weight: 700;
     }
   
-    .challenge{
-      color: #7000ff;
-    }
+   
     header > div.hamburger {
       display: block;
       position: fixed;
@@ -472,6 +480,11 @@ header {
     z-index: -100;
   }
   
+  span > b{
+    color: #7000ff;
+    font-weight: 500;
+  }
+
   @keyframes publisher {
     from {
       opacity: 0;
@@ -660,6 +673,23 @@ header {
 
   /* background: #fff; */
 }
+
+.project_ex > p > a{
+  text-decoration: #4B4BA3 3px underline;
+  color: #fff;
+  cursor: pointer;
+}
+
+.project_ex > p > a > span{
+  color: #6969ff;
+
+}
+
+
+
+
+
+
 /* -------------------------------------------------------------------------------------------------------------- */
 /* 어바웃 섹션 */
 /* -------------------------------------------------------------------------------------------------------------- */
