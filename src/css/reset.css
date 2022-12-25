@@ -72,7 +72,7 @@ table {
 }
 /* 스크롤바의 전체 배경색 */
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #7000ff, #ffdd1e);
+  background: linear-gradient(to bottom, #7000ff, #6969FF);
   border-radius: 3px;
 }
 /* 스크롤바 색 */
