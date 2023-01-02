@@ -38,7 +38,7 @@
 }
 
 
-@media screen { body { background-color: rgba(250, 250, 250, 1); } }
+@media screen { body { background-color: #242424 } }
   
 body {
 font-family: 'Noto Sans', sans-serif;
@@ -469,20 +469,23 @@ header {
     top: 17vh;
     text-align: left;
     line-height: 1.4;
-    font-weight: 600;
+    font-weight: 800;
     color: #fff;
+    font-family: 'Gowun Dodum', sans-serif;
   }
 
   p.hello > span {
     opacity: 0;
-    font-weight: 300;
+    font-weight: 100;
     animation: publisher 1.5s 2s linear forwards;
     z-index: -100;
+    font-family: 'Gowun Dodum', sans-serif;
   }
   
   span > b{
     color: #7000ff;
-    font-weight: 500;
+    font-family: 'Gowun Dodum', sans-serif;
+    font-weight: 900;
   }
 
   @keyframes publisher {
